@@ -3,47 +3,361 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yasser Merikhi's Page</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to the CSS file -->
-    <script src="swf.js" defer></script> <!-- Link to the JavaScript file -->
+    <title>Yasser Merikhi - Math Teacher & English Educator</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Yasser Merikhi - Professional Math Teacher and Admin of English dz الإنجليزية. Offering English learning resources and educational materials.">
+    <meta name="keywords" content="Yasser Merikhi, Math Teacher, English Learning, English dz, Education, Algeria">
+    <meta name="author" content="Yasser Merikhi">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Yasser Merikhi - Math Teacher & English Educator">
+    <meta property="og:description" content="Professional educator offering math expertise and English learning resources">
+    <meta property="og:image" content="Mypic2.jpeg">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="Mypic2.jpeg">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="swf.js" defer></script>
 </head>
 <body>
-    <header class="hero" id="home">
-        <img src="Mypic2.jpeg" alt="Yasser Merikhi's Photo" class="profile-pic">
-        <h1>Yasser Merikhi</h1>
-        <p class="welcome-message">Welcome to my personal webpage!</p>
-        <div class="buttons">
-            <button onclick="showSection('about')" class="btn">About Me</button>
-            <button onclick="showSection('resources')" class="btn">English Resources</button>
-            <button onclick="showSection('pdfs')" class="btn">English PDFs</button>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="spinner"></div>
+            <p>Loading...</p>
         </div>
-        <div class="contacts">
-            <p>Email: <a href="mailto:yassermerikhi@gmail.com">yassermerikhi@gmail.com</a></p>
-            <p>Phone: <a href="tel:+213665358298">+213665358298</a></p>
-            <p>Facebook: <a href="https://www.facebook.com/profile.php?id=61551801317307&mibextid=ZbWKwL" target="_blank">Personal Account</a></p>
-            <p>Facebook Page: <a href="https://www.facebook.com/profile.php?id=61552396720476&mibextid=ZbWKwL" target="_blank">English dz الإنجليزية</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/yasser-merikhi-58739b1a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn Profile</a></p>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-text">YM</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#resources" class="nav-link">Resources</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-bg">
+            <div class="hero-pattern"></div>
+        </div>
+        <div class="hero-content" data-aos="fade-up">
+            <div class="profile-container">
+                <img src="Mypic2.jpeg" alt="Yasser Merikhi's Photo" class="profile-pic" loading="lazy">
+                <div class="profile-ring"></div>
+            </div>
+            <h1 class="hero-title">Yasser Merikhi</h1>
+            <p class="hero-subtitle">Math Teacher & English Educator</p>
+            <p class="hero-description">Passionate educator making complex concepts accessible and engaging</p>
+            <div class="hero-buttons">
+                <a href="#about" class="btn btn-primary">
+                    <i class="fas fa-user"></i>
+                    <span>About Me</span>
+                </a>
+                <a href="#resources" class="btn btn-secondary">
+                    <i class="fas fa-book"></i>
+                    <span>Resources</span>
+                </a>
+            </div>
+            <div class="social-links">
+                <a href="mailto:yassermerikhi@gmail.com" class="social-link" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:+213665358298" class="social-link" aria-label="Phone">
+                    <i class="fas fa-phone"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61551801317307&mibextid=ZbWKwL" target="_blank" class="social-link" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/yasser-merikhi-58739b1a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-link" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <a href="#about" aria-label="Scroll to about section">
+                <i class="fas fa-chevron-down"></i>
+            </a>
         </div>
     </header>
-    <section id="about" class="content-section">
-        <h2>About Me</h2>
-        <p>Hello! I'm Yasser Merikhi, the dedicated admin of the popular Facebook page "English dz الإنجليزية." As a passionate Math teacher, I enjoy the challenge of making complex concepts accessible and engaging for my students.</p>
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <p class="about-intro">Hello! I'm Yasser Merikhi, the dedicated admin of the popular Facebook page "English dz الإنجليزية."</p>
+                    <p>As a passionate Math teacher with a Bachelor's degree in Mathematics, I enjoy the challenge of making complex concepts accessible and engaging for my students. My mission is to bridge the gap between mathematical thinking and language learning.</p>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4>Education</h4>
+                                <p>Bachelor's in Mathematics</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <div>
+                                <h4>Profession</h4>
+                                <p>Math Teacher & Educator</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-globe"></i>
+                            <div>
+                                <h4>Languages</h4>
+                                <p>Arabic, English, French</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-interests" data-aos="fade-left">
+                    <h3>Interests & Hobbies</h3>
+                    <div class="interest-cards">
+                        <div class="interest-card">
+                            <i class="fas fa-swimmer"></i>
+                            <h4>Swimming</h4>
+                            <p>Stay fit and relaxed through regular swimming sessions</p>
+                        </div>
+                        <div class="interest-card">
+                            <i class="fas fa-chess"></i>
+                            <h4>Chess</h4>
+                            <p>Challenge the mind with strategic gameplay</p>
+                        </div>
+                        <div class="interest-card">
+                            <i class="fas fa-hiking"></i>
+                            <h4>Nature Discovery</h4>
+                            <p>Explore and discover new natural environments</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <section id="resources" class="content-section">
-        <h2>English Resources</h2>
-        <p>Here you can find various resources to help you learn and improve your English skills.</p>
+    <!-- Resources Section -->
+    <section id="resources" class="section resources-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">English Learning Resources</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Carefully curated materials to enhance your English learning journey</p>
+            </div>
+            <div class="resources-grid">
+                <div class="resource-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Grammar Guides</h3>
+                    <p>Comprehensive grammar explanations with practical examples</p>
+                    <a href="#" class="card-link">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="resource-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-icon">
+                        <i class="fas fa-headphones"></i>
+                    </div>
+                    <h3>Listening Practice</h3>
+                    <p>Audio materials to improve your listening comprehension</p>
+                    <a href="#" class="card-link">Listen <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="resource-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Speaking Exercises</h3>
+                    <p>Interactive exercises to boost your speaking confidence</p>
+                    <a href="#" class="card-link">Practice <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <!-- PDF Downloads Section -->
+            <div class="pdf-section" data-aos="fade-up">
+                <h3 class="subsection-title">Downloadable PDFs</h3>
+                <div class="pdf-grid">
+                    <div class="pdf-card">
+                        <div class="pdf-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div class="pdf-info">
+                            <h4>English Grammar Essentials</h4>
+                            <p>Complete guide to English grammar rules</p>
+                            <div class="pdf-meta">
+                                <span><i class="fas fa-file-alt"></i> 2.5 MB</span>
+                                <span><i class="fas fa-download"></i> 1,234 downloads</span>
+                            </div>
+                        </div>
+                        <a href="Pdf1.pdf" target="_blank" class="pdf-download" aria-label="Download English Grammar Essentials">
+                            <i class="fas fa-download"></i>
+                        </a>
+                    </div>
+                    <div class="pdf-card">
+                        <div class="pdf-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div class="pdf-info">
+                            <h4>Vocabulary Builder</h4>
+                            <p>1000+ essential English words with examples</p>
+                            <div class="pdf-meta">
+                                <span><i class="fas fa-file-alt"></i> 1.8 MB</span>
+                                <span><i class="fas fa-download"></i> 892 downloads</span>
+                            </div>
+                        </div>
+                        <a href="Pdf2.pdf" target="_blank" class="pdf-download" aria-label="Download Vocabulary Builder">
+                            <i class="fas fa-download"></i>
+                        </a>
+                    </div>
+                    <div class="pdf-card">
+                        <div class="pdf-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div class="pdf-info">
+                            <h4>Practice Exercises</h4>
+                            <p>Interactive exercises with answer keys</p>
+                            <div class="pdf-meta">
+                                <span><i class="fas fa-file-alt"></i> 3.2 MB</span>
+                                <span><i class="fas fa-download"></i> 567 downloads</span>
+                            </div>
+                        </div>
+                        <a href="Pdf3.pdf" target="_blank" class="pdf-download" aria-label="Download Practice Exercises">
+                            <i class="fas fa-download"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <section id="pdfs" class="content-section">
-        <h2>English PDFs</h2>
-        <p>Download useful PDF documents for your English learning journey.</p>
-        <ul class="pdf-list">
-            <li><a href="Pdf1.pdf" target="_blank">PDF 1</a></li>
-            <li><a href="Pdf2.pdf" target="_blank">PDF 2</a></li>
-            <li><a href="Pdf3.pdf" target="_blank">PDF 3</a></li>
-        </ul>
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Let's connect and explore learning opportunities together</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:yassermerikhi@gmail.com">yassermerikhi@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <a href="tel:+213665358298">+213 665 358 298</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-facebook"></i>
+                        <div>
+                            <h4>Facebook Page</h4>
+                            <a href="https://www.facebook.com/profile.php?id=61552396720476&mibextid=ZbWKwL" target="_blank">English dz الإنجليزية</a>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" data-aos="fade-left" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <span class="form-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <span class="form-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" placeholder="Subject" required>
+                        <span class="form-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                        <span class="form-error"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Send Message</span>
+                    </button>
+                </form>
+            </div>
+        </div>
     </section>
-    <footer>
-        <p>&copy; 2024 Yasser Merikhi. All rights reserved.</p>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Yasser Merikhi</h3>
+                    <p>Empowering minds through education</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#resources">Resources</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="mailto:yassermerikhi@gmail.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61551801317307&mibextid=ZbWKwL" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/yasser-merikhi-58739b1a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Yasser Merikhi. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- AOS Animation Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </body>
 </html>
